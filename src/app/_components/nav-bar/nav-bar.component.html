@@ -2,6 +2,7 @@
     <span>Menü </span> 
     <a  [routerLink] = "['/blog']"  mat-button >Anasayfa</a>
     <a mat-button>Profil</a>
-    <a [routerLink] = "['/login']" style="position : fixed;right: 0;" mat-button>Giriş Yap</a>
+    <a *ngIf = "!isLogin" [routerLink] = "['/login']" style="position : fixed;right: 0;" mat-button>Giriş Yap</a>
+    <p *ngIf="isLogin" style="position: fixed;right: 0;">Hoş geldin {{username}} ! <br> <span style="color:red"><a mat-button (click)= "logout()"> Çıkış Yap</a></span> </p>
 </mat-toolbar>
 register

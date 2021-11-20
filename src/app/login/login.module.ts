@@ -10,6 +10,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {HttpClientModule} from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     LoginRoutingModule,
     FormsModule,
     MatButtonToggleModule,
+    MatSnackBarModule
   ],
   providers: [],
 })
