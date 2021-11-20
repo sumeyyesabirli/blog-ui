@@ -15,7 +15,8 @@ import { BlogRoutingModule } from './blog-routing.module';
      BlogRoutingModule,  
      MatToolbarModule,
      MatButtonModule,
-     MatCardModule
+     MatCardModule,
+     CommonModule
   ]
 })
 export class BlogModule { } 

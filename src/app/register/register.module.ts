@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
-import { LoginRoutingModule } from './login-routing.module';
-import { LoginComponent } from './login.component';
+
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
@@ -10,11 +9,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {HttpClientModule} from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { RegisterComponent } from './register.component';
+import { RegisterRoutingModule } from './register-routing.module';
 
 
 @NgModule({
   declarations: [
-    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     FlexLayoutModule,
@@ -24,12 +25,12 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatCardModule,
     MatToolbarModule,
     HttpClientModule,
-    LoginRoutingModule,
+    RegisterRoutingModule,
     FormsModule,
     MatButtonToggleModule,
   ],
   providers: [],
 })
-export class LoginModule { }
+export class RegisterModule { }
 
 

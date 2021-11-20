@@ -16,7 +16,8 @@ import { FooterComponent } from './footer/footer.component';
         MatInputModule,
         MatButtonModule,
         MatCardModule,
-        MatToolbarModule, ],
+        MatToolbarModule,
+         ],
     declarations: [ NavBarComponent, FooterComponent ],
     exports: [ NavBarComponent, FooterComponent ]
 })
