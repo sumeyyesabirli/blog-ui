@@ -3,7 +3,6 @@ import { AuthService } from '../_services/auth.service';
 import { HttpService } from '../_services/http.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { NavBarComponent } from '../_components/nav-bar/nav-bar.component';
 
 
 

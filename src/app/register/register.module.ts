@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { RegisterComponent } from './register.component';
 import { RegisterRoutingModule } from './register-routing.module';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { RegisterRoutingModule } from './register-routing.module';
     RegisterRoutingModule,
     FormsModule,
     MatButtonToggleModule,
+    MatSnackBarModule
   ],
   providers: [],
 })
