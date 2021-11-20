@@ -1,0 +1,48 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="25">
+        <mat-toolbar style="background-color:olivedrab" fxLayoutAlign="center center" color="primary">Üye Ol</mat-toolbar>
+    
+        <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+            <mat-form-field >
+              <mat-label>Adı </mat-label>
+              <input matInput name="firstName" [(ngModel)]="addUser.firstName" placeholder="Adı" >
+            </mat-form-field>
+
+            <mat-form-field >
+                <mat-label>Soyadı </mat-label>
+                <input matInput name="lastName" placeholder="Soyadı"  [(ngModel)]="addUser.lastName" >
+              </mat-form-field>
+
+              <mat-form-field >
+                <mat-label>Kullanıcı Adı </mat-label>
+                <input matInput name="username" placeholder="Kullanıcı Adı"   [(ngModel)]="addUser.username">
+              </mat-form-field>
+
+              <mat-form-field >
+                <mat-label>E-Posta Adresi </mat-label>
+                <input matInput name="mail" type="email"placeholder="E-Posta Adresi "  [(ngModel)]="addUser.mail" >
+              </mat-form-field>
+          
+            <mat-form-field >
+              
+                <mat-label>Şifre</mat-label>
+                <input matInput name="password" type="password" placeholder="Şİfre"  [(ngModel)]="addUser.passsword">
+              </mat-form-field>
+              
+              <div fxLayoutAlign="center center">
+              <button mat-raised-button type="submit"  style="background-color:olivedrab" (click)="save()" color="primary">Üye OL</button>
+              <button mat-raised-button type="submit"  style="background-color:olivedrab"  color="primary" routerLink="/User">Üye Girişi</button>
+              <button mat-raised-button type="submit"  style="background-color:olivedrab"  color="primary" routerLink="/blog">-</button>
+            </div>
+         
+            </form>  
+
+         
+          
+    </mat-card>
+    
+
+</div>
+
+
+

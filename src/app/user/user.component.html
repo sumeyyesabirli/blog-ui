@@ -1,0 +1,15 @@
+<div fxLayoutAlign="center center" fxFlexFill>
+    <mat-card fxFlex="20">
+        <form fxLayoutAlign="stretch" fxLayout="column" [formGroup]=formGroup (ngSubmint)="userProces()">
+            <mat-form-field>
+                <input formControlName="username" matInput placeholder="Kullanıcı Adı"  formControlName="username">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Şifre" formControlName="passsword">
+            </mat-form-field>
+            <button mat-raised-button type="submit" style="background-color:olivedrab" color="primary"
+                routerLink="/User">Giriş Yap</button>
+        </form>
+    </mat-card>
+</div>
