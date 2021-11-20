@@ -7,27 +7,15 @@ import {MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { BlogRoutingModule } from './blog-routing.module';
 
-
-
-
 @NgModule({
   declarations: [
     BlogComponent
-    
-
-    
   ],
   imports: [
-    BlogRoutingModule,
-     
+     BlogRoutingModule,  
      MatToolbarModule,
      MatButtonModule,
      MatCardModule
-     
-     
-    
-    
-
   ]
 })
 export class BlogModule { } 

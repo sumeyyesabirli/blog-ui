@@ -17,17 +17,11 @@ import { UserModule } from './user/user.module';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BlogModule } from './blog/blog.module';
-
-
-
-
+import { ComponentsModule } from './_components/components.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    
-    
-    
   ],
   imports: [
     BrowserModule,
@@ -44,9 +38,8 @@ import { BlogModule } from './blog/blog.module';
     UserModule,
     ReactiveFormsModule,
     FormsModule,
-    BlogModule,
-    
-   
+    BlogModule, 
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -20,10 +20,21 @@ export class HttpService {
 
    }
 
+   /**
+    * 
+    * @param data 
+    * @returns 
+    */
    user(data:any):Observable<any>{
     return this.httpClient.post('${apiUrl}user/user',data)
    }
 
+   /**
+    * 
+    * @param url
+    * @param params 
+    * @returns 
+    */
    public Get(url:string,params?:any){
       return this.httpClient.get(apiUrl + url, {params: params, headers: this.getHeaders()})
    }
@@ -35,17 +46,24 @@ export class HttpService {
       return this.httpClient.post(apiUrl + url, data , {headers : this.getHeaders()});
    }
 
+   /**
+    * 
+    * @param url 
+    * @param data 
+    * @returns 
+    */
   public Delete(url:string, data:any){
     let options={Headers:this.getHeaders(),body:data};
     return this.httpClient.delete(url,options);
-    
-    
-
    }
 
+   /**
+    * 
+    * @param url 
+    * @param data 
+    * @returns 
+    */
    public Put(url:string, data:any){
     return this.httpClient.put(apiUrl + url, data , {headers : this.getHeaders()});
-   
-
    }
 }
