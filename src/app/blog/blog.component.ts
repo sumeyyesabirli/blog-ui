@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { PostsService } from '../_services/blog/posts.serivce';
 import { Products } from './products';
 
 @Component({
@@ -8,13 +9,20 @@ import { Products } from './products';
 })
 export class BlogComponent implements OnInit {
 
-  constructor() { }
-
-  post = [
-    {category : 'boş şeyler',date : '20.10.2021',author : 'ss', img: "https://material.angular.io/assets/img/examples/shiba1.jpg", title: "Post 1", description : 'birinci postun birazı...' },
-    {category : 'hayvan sevgisi',date : '20.11.2021', author : 'ss', img: "https://material.angular.io/assets/img/examples/shiba2.jpg", title: "Post 2", description : 'birinci postun birazı...' },
+  post : any = [
   ]
 
+  constructor(private _postService : PostsService) { 
+      this.getLastTreePosts(); //son 3 postu çekmek için func yazdım
+  }
+
   ngOnInit(): void {
+
+  }
+
+  getLastTreePosts(){
+    this._postService.getLastPosts().subscribe(x=>{
+        this.post = x;
+    })
   }
 }

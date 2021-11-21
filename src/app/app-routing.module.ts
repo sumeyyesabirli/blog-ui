@@ -7,6 +7,7 @@ const routes: Routes = [
   {path:'User', loadChildren: ()=> import('./user/user.module').then(m=> m.UserModule) },
   {path:'blog', loadChildren: ()=> import('./blog/blog.module').then(m=> m.BlogModule) },
   {path:'', loadChildren: ()=> import('./blog/blog.module').then(m=> m.BlogModule) },
+  {path:'add-post', canActivate:[AuthGuard] , loadChildren: ()=> import('./add-post/add-post.module').then(m=> m.AddPostModule) },
 
 ];
 

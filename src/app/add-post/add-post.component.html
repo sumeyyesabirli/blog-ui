@@ -1,0 +1,45 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main-div">
+    <mat-card fxFlex="25">
+        <mat-toolbar style="background-color:olivedrab" fxLayoutAlign="center center" color="primary">Yeni Yazı Ekle</mat-toolbar>   
+        <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+            <mat-form-field >
+              <mat-label>Başlık </mat-label>
+              <input matInput name="title" [(ngModel)]="addPost.title" placeholder="Başlık" >
+            </mat-form-field>
+            <mat-form-field >
+                <mat-label>Açıklama </mat-label>
+                <input matInput name="description" placeholder="Açıklama"  [(ngModel)]="addPost.description" >
+              </mat-form-field>
+              <mat-form-field >
+                <mat-label>Yazı İçeriği </mat-label>
+                <textarea matInput rows="5" name="contentText" placeholder="Yazı İçeriği"   [(ngModel)]="addPost.contentText"></textarea>
+              </mat-form-field>
+              <mat-form-field >
+                <mat-label>Fotoğraf Url'i </mat-label>
+                <input matInput name="img" placeholder="Fotoğraf Url'i "  [(ngModel)]="addPost.img" >
+              </mat-form-field>        
+             <mat-form-field >          
+                <mat-label>Kategori</mat-label>
+                <mat-select [(ngModel)]="selectedCategory">
+                    <mat-option *ngFor="let category of categories" [value]="category.id">
+                      {{category.name}}
+                    </mat-option>
+                  </mat-select>
+              </mat-form-field>
+              
+              <div fxLayoutAlign="center center">
+              <button mat-raised-button type="submit"  style="background-color:olivedrab" (click)="save()" color="primary">Kaydet</button>
+              </div>   
+            </form>      
+    </mat-card>
+
+</div>
+
+
+
+Id = item.Id,
+Title = item.Title,
+Description = item.Description,
+ContentText = item.ContentText,
+Category = category.Name,
+Img = item.ImageUrl
