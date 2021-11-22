@@ -1,0 +1,12 @@
+.example-card {
+    max-width: 400px;
+    position: relative;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top:50px;
+    padding: 10px;
+    bottom:200px;
+    top:10px;
+
+  }
+

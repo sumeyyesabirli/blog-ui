@@ -1,0 +1,21 @@
+<mat-card  class="example-card">
+    <mat-card-header>
+        <mat-card-subtitle>
+            {{post.author}} tarafından yazıldı
+            <p>
+                Tarih : {{post.date}}
+            </p>
+            <p>Kategori : {{post.category}}</p>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src={{post.img}} alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <mat-card-title style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">{{post.title}}
+        </mat-card-title>
+
+        <p>
+            {{ post.contentText}}
+        </p>
+    </mat-card-content>
+
+</mat-card>

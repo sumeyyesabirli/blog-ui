@@ -4,8 +4,7 @@ import { CommonModule } from '@angular/common';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
-import { AddPostRoutingModule } from './add-post-routing.module';
-import { AddPostComponent } from './add-post.component';
+import { PostSingleRoutingModule } from './post-single-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -15,13 +14,14 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatSelectModule} from '@angular/material/select';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { PostSingleComponent } from './post-single.component';
 
 @NgModule({
   declarations: [
-    AddPostComponent
+    PostSingleComponent
   ],
   imports: [
-     AddPostRoutingModule,  
+      PostSingleRoutingModule,  
      MatToolbarModule,
      MatButtonModule,
      MatCardModule,
@@ -40,5 +40,5 @@ import { NgSelectModule } from '@ng-select/ng-select';
      NgSelectModule
   ]
 })
-export class AddPostModule { } 
+export class PostSingleModule { } 
 

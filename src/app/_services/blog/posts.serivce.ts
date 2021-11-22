@@ -25,5 +25,12 @@ export class PostsService {
      return this.httpClient.Get("posts/get-last-tree-posts");
    }
 
+  public addPost(items : any){
+    return this.httpClient.Post("posts",items);
+  }
+
+  public getPost(id:number){
+    return this.httpClient.Get(`posts/${id}`);
+  }
   
 }

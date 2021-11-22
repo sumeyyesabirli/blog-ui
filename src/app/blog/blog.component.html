@@ -19,7 +19,7 @@
   </mat-card-content>
   <mat-card-actions>
     
-    <button style=" font-family: Verdana, Geneva, Tahoma, sans-serif;"mat-button routerLink="/text">Devamı için..</button>
+    <button [routerLink]="['/single-post']" [queryParams]="{ id: item.id}" style=" font-family: Verdana, Geneva, Tahoma, sans-serif;"mat-button routerLink="/text">Devamı için..</button>
   </mat-card-actions>
 </mat-card>
 

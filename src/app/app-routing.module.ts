@@ -8,7 +8,7 @@ const routes: Routes = [
   {path:'blog', loadChildren: ()=> import('./blog/blog.module').then(m=> m.BlogModule) },
   {path:'', loadChildren: ()=> import('./blog/blog.module').then(m=> m.BlogModule) },
   {path:'add-post', canActivate:[AuthGuard] , loadChildren: ()=> import('./add-post/add-post.module').then(m=> m.AddPostModule) },
-
+  {path:'single-post', loadChildren:()=> import('./post-single/post-single.module').then(x=> x.PostSingleModule)}
 ];
 
 @NgModule({
