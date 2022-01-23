@@ -6,6 +6,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { BlogRoutingModule } from './blog-routing.module';
+import { AboutMeModule } from '../about-me/about-me.module';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { BlogRoutingModule } from './blog-routing.module';
      MatToolbarModule,
      MatButtonModule,
      MatCardModule,
-     CommonModule
+     CommonModule,
+     AboutMeModule
   ]
 })
 export class BlogModule { } 

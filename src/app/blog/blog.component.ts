@@ -21,6 +21,7 @@ export class BlogComponent implements OnInit {
   }
 
   getLastTreePosts(){
+    //subscibe olmadan içindeki veriye erişemem, bi neni abone oluyorsun
     this._postService.getLastPosts().subscribe(x=>{
         this.post = x;
     })

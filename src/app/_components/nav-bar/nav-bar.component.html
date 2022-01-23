@@ -1,9 +1,8 @@
-<mat-toolbar style="position: fixed; background-color: bisque;z-index: 9999">
+<mat-toolbar style="position: relative; background-color: rgba(0, 0, 0, .3);z-index: 9999">
     <span>Menü </span> 
     <a  [routerLink] = "['/blog']"  mat-button >Anasayfa</a>
     <a mat-button>Profil</a>
     <a *ngIf = "isLogin" [routerLink] = "['/add-post']" style="position : fixed;right: 140px;" mat-button>Yazı Yayınla</a>
     <a *ngIf = "!isLogin" [routerLink] = "['/login']" style="position : fixed;right: 0;" mat-button>Giriş Yap</a>
-    <p *ngIf="isLogin" style="position: fixed;right: 0;">Hoş geldin {{username}} ! <br> <span style="color:red"><a mat-button (click)= "logout()"> Çıkış Yap</a></span> </p>
+    <p *ngIf="isLogin" style="position: fixed;right: 0;">Hoş geldin {{username}} ! <br> <span style="color:black"><a mat-button (click)= "logout()"> Çıkış Yap</a></span> </p>
 </mat-toolbar>
-register

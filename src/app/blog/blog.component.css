@@ -1,4 +1,5 @@
 .example-card {
+   
     max-width: 300px;
     position: relative;
     margin: auto;
@@ -8,5 +9,11 @@
     bottom:200px;
     top:10px;
 
+  }
+  .content{
+    padding:16;
+  }
+  .content> mat-card {
+    width:200px;
   }
 

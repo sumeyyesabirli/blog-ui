@@ -1,0 +1,15 @@
+<div class="rightbar">
+    <mat-card  class="example-card" >
+        <mat-card-header>
+            <mat-card-title>
+             Rastgele Postlar
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <h4 *ngFor="let post of posts">
+             <a  [routerLink]="['/single-post']" [queryParams]="{ id: post.id}">  {{post.title}}</a>
+            </h4>
+            
+        </mat-card-content>
+    </mat-card>
+</div>

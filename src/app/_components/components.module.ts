@@ -8,6 +8,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './footer/footer.component';
+import { LeftBarComponent } from './left-bar/left-bar.component';
+import { RightBarComponent } from './right-bar/right-bar.component';
 
 @NgModule({
     imports: [ RouterModule,
@@ -18,8 +20,8 @@ import { FooterComponent } from './footer/footer.component';
         MatCardModule,
         MatToolbarModule,
          ],
-    declarations: [ NavBarComponent, FooterComponent ],
-    exports: [ NavBarComponent, FooterComponent ]
+    declarations: [ NavBarComponent, FooterComponent, LeftBarComponent, RightBarComponent ],
+    exports: [ NavBarComponent, FooterComponent, LeftBarComponent, RightBarComponent ]
 })
 
 export class ComponentsModule {}

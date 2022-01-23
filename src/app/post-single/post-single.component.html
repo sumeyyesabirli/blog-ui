@@ -3,7 +3,7 @@
         <mat-card-subtitle>
             {{post.author}} tarafından yazıldı
             <p>
-                Tarih : {{post.date}}
+                Tarih : {{post.date  | date: 'dd.MM.yyyy h:mm:ss'}}
             </p>
             <p>Kategori : {{post.category}}</p>
         </mat-card-subtitle>
@@ -18,4 +18,68 @@
         </p>
     </mat-card-content>
 
+</mat-card>
+<mat-card  class="example-card" *ngIf = "comments.length == 0">
+    <mat-card-header>
+        <mat-card-title>
+          Yorum Yok
+        </mat-card-title>
+    </mat-card-header>
+    
+</mat-card>
+<mat-card  class="example-card" *ngFor = "let comment of comments">
+    <mat-card-header>
+        <mat-card-title>
+           {{comment.title}}
+        </mat-card-title>
+        <mat-card-subtitle>
+            {{comment.date  | date: 'dd.MM.yyyy hh:mm:ss'}}
+         </mat-card-subtitle>
+         
+    </mat-card-header>
+    <mat-card-content>
+       <h4>{{comment.firstName}} {{comment.lastName}}</h4>
+       <p>
+            {{comment.comment}}
+       </p>
+    </mat-card-content>
+</mat-card>
+<mat-card  class="example-card">
+    <mat-card-header>
+        <mat-card-title>
+           Yorum Yap
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                    <input [(ngModel)]="newComment.mail" placeholder="Mail" type="text">
+                </td>
+                <td>
+                     <input placeholder="Ad" [(ngModel)]="newComment.firstName" type="text">
+                </td>
+                <td>
+                    <input placeholder="Soyad" [(ngModel)]="newComment.lastName" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                     <input placeholder="Başlık" [(ngModel)]="newComment.title" type = "text">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <textarea width="100%" [(ngModel)]="newComment.comment">
+
+                    </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                   <input type="submit" (click)="addComment()" value="Yorum Yap">
+                </td>
+            </tr>
+        </table>
+    </mat-card-content>
 </mat-card>

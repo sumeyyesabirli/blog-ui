@@ -1,7 +1,9 @@
 .footer{
-    background-color: bisque;
+    background-color: rgba(0, 0, 0, .3) ;
     padding: 5px;
     position: fixed;
     bottom: 0px;
+    left:0px;
+    right: 0px;
     width: 100%;
 }

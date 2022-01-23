@@ -39,7 +39,7 @@ import { AuthGuard } from './_services/authGuard';
     FormsModule,
     BlogModule, 
     ComponentsModule,
-    RegisterModule
+    RegisterModule,    
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

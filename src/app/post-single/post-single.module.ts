@@ -16,6 +16,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { PostSingleComponent } from './post-single.component';
 
+
 @NgModule({
   declarations: [
     PostSingleComponent
@@ -37,7 +38,8 @@ import { PostSingleComponent } from './post-single.component';
      MatButtonToggleModule,
      MatSnackBarModule,
      MatSelectModule,
-     NgSelectModule
+     NgSelectModule,
+    
   ]
 })
 export class PostSingleModule { } 

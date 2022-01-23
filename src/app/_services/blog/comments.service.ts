@@ -8,7 +8,7 @@ const apiUrl = environment.apiUrl;
 @Injectable({
   providedIn: 'root'
 })
-export class PostsService {
+export class CommentsService {
 
   
   constructor(private httpClient:HttpService) {
@@ -16,25 +16,16 @@ export class PostsService {
    }
 
    /**
-    * Son paylaşılan 3 postu getirir
+    * 
     * @param url
     * @param params 
     * @returns 
     */
-   public getLastPosts(){
-     return this.httpClient.Get("posts/get-last-tree-posts");
+   public getCommentsForPost(postId : number){
+     return this.httpClient.Get(`comments/${postId}`);
    }
 
-  public addPost(items : any){
-    return this.httpClient.Post("posts",items);
+  public addPost(post : any){
+      return this.httpClient.Post("comments",post);
   }
-
-  public getPost(id:number){
-    return this.httpClient.Get(`posts/${id}`);
-  }
-
-  public getRandomPost(){
-    return this.httpClient.Get("posts/get-random-posts");
-  }
-  
 }
