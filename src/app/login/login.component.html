@@ -1,23 +1,32 @@
-<div fxLayoutAlign="center center" fxFlexFill class="main-div">
-  <mat-card fxFlex="25">
-      <mat-toolbar style="background-color:olivedrab" fxLayoutAlign="center center" color="primary">Giriş Yap</mat-toolbar>   
-      <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
-          <mat-form-field >
-            <mat-label>Kullanıcı Adı </mat-label>
-            <input matInput name="username" [(ngModel)]="loginModel.username" placeholder="Kullanıcı Adı" >
-          </mat-form-field>
-          <mat-form-field >
-              <mat-label>Şifre </mat-label>
-              <input matInput type="password" name="password" placeholder="Şifre"  [(ngModel)]="loginModel.password" >
-            </mat-form-field>         
-            <div fxLayoutAlign="center center">
-            <button mat-raised-button type="submit"  style="background-color:olivedrab" (click)="login()" color="primary">Giriş Yap</button>
-            <button mat-raised-button type="submit"  style="background-color:olivedrab;margin-left: 5px;"  color="primary"  [routerLink] = "['/register']">Kayıt Ol</button>
-         </div>   
-          </form>      
-  </mat-card>
-
+<div class="container main-div login-form">
+	<div class="screen">
+		<div class="screen__content">
+			<form class="login">
+				<div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+					<input matInput name="username" [(ngModel)]="loginModel.username" placeholder="Kullanıcı Adı" >
+				</div>
+				<div class="login__field">
+					<i class="login__icon fas fa-lock"></i>
+					<input matInput type="password" name="password" placeholder="Şifre"  [(ngModel)]="loginModel.password" >
+				</div>
+        <button class="button login__submit" (click)="login()">
+					<span class="button__text">Giriş Yap</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>
+        <button class="button login__submit" [routerLink] = "['/register']">
+					<span class="button__text">Üye Ol</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>						
+			</form>			
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
 </div>
-
 
 
